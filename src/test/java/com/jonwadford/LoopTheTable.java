@@ -26,7 +26,6 @@ public class LoopTheTable {
     public void printTableValues() {
 
         WebTableUtils tableBody = new WebTableUtils(driver.findElement(By.cssSelector("table.notranslate#club_directory_list")));
-        WebTableUtils tableHeader = new WebTableUtils(driver.findElement(By.cssSelector("table.notranslate tbody")));
 
         for (int i = 2; i <= tableBody.getRowCount(); i++) {
             System.out.println("Club Name: "+tableBody.getCellData(i,1));
